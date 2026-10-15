@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#101a16" />
+    <title>Rắn săn mồi</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <header class="topbar">
+        <a class="brand" href="#" aria-label="Rắn săn mồi — trang chủ">
+          <span class="brand-icon" aria-hidden="true">〰</span>
+          <span>snake<span class="brand-dot">.</span></span>
+        </a>
+        <div class="topbar-note"><span class="live-dot"></span> MINI ARCADE <span class="note-divider">/</span> 01</div>
+      </header>
+
+      <section class="game-layout" aria-label="Trò chơi rắn săn mồi">
+        <div class="game-column">
+          <div class="game-heading">
+            <div>
+              <p class="eyebrow">TRÒ CHƠI KINH ĐIỂN</p>
+              <h1>Rắn săn mồi<span>.</span></h1>
+            </div>
+            <div class="status-pill" id="status-pill"><span class="status-indicator"></span><span id="status-text">Sẵn sàng</span></div>
+          </div>
+
+          <div class="board-frame">
+            <canvas id="game" width="600" height="600" aria-label="Bàn chơi rắn săn mồi" role="img"></canvas>
+            <div class="overlay" id="overlay">
+              <div class="overlay-card">
+                <div class="overlay-mark" id="overlay-mark" aria-hidden="true">▶</div>
+                <p class="eyebrow" id="overlay-eyebrow">SẴN SÀNG CHƯA?</p>
+                <h2 id="overlay-title">Bắt đầu thôi</h2>
+                <p class="overlay-copy" id="overlay-copy">Ăn thật nhiều trái cây và đừng để đâm vào chính mình nhé.</p>
+                <button class="primary-button" id="start-button" type="button">Chơi ngay <span aria-hidden="true">→</span></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="board-footer">
+            <span><span class="keycap">↑</span><span class="keycap">←</span><span class="keycap">↓</span><span class="keycap">→</span> để di chuyển</span>
+            <span class="footer-separator">·</span>
+            <span><span class="keycap keycap-letter">P</span> tạm dừng</span>
+          </div>
+        </div>
+
+        <aside class="sidebar" aria-label="Thông tin trò chơi">
+          <section class="score-card">
+            <p class="card-label">ĐIỂM SỐ</p>
+            <div class="score-number" id="score">00</div>
+            <div class="score-caption"><span class="fruit-dot"></span> Quả đã ăn</div>
+          </section>
+
+          <section class="record-card">
+            <div class="record-icon" aria-hidden="true">✦</div>
+            <div><p class="card-label">KỶ LỤC CỦA BẠN</p><div class="record-score" id="best-score">00 <span>điểm</span></div></div>
+          </section>
+
+          <section class="howto-card">
+            <p class="card-label">CÁCH CHƠI</p>
+            <div class="instruction"><span class="instruction-icon">↗</span><span>Dùng <strong>phím mũi tên</strong> hoặc <strong>W A S D</strong> để điều khiển</span></div>
+            <div class="instruction"><span class="instruction-icon fruit-instruction">●</span><span>Ăn trái cây để rắn dài thêm và ghi điểm</span></div>
+            <div class="instruction"><span class="instruction-icon pause-instruction">Ⅱ</span><span>Nhấn <strong>P</strong> hoặc <strong>Space</strong> để tạm dừng</span></div>
+          </section>
+
+          <button class="secondary-button" id="restart-button" type="button"><span aria-hidden="true">↻</span> Chơi lại</button>
+        </aside>
+      </section>
+
+      <footer class="page-footer"><span>THƯ GIÃN MỘT CHÚT, CHƠI MỘT VÁN NHÉ.</span><span>ĐƯỢC LÀM BẰNG <span class="heart">♥</span> &amp; JAVASCRIPT</span></footer>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

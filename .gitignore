@@ -1,0 +1,6 @@
+# Visual Studio workspace and cache files
+.vs/
+
+# Operating system files
+Thumbs.db
+.DS_Store
